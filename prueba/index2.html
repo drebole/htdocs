@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Paja & forraje - Esparza</title>
+		<link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon" />
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="css/carrusel.css" rel="stylesheet">
+        <!--link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"-->
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <script type='text/javascript' src="js/jquery-1.11.0.min.js"></script>
+        <script type='text/javascript' src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="js/gmaps.js"></script>
+        <script type='text/javascript'>
+		var map;
+		$(document).ready(function(){
+		  map = new GMaps({
+			div: '#mapa',
+			lat: 42.6477983,
+			lng: -1.9940995,
+			zoom: 10
+		  });
+		  map.addMarker({lat:42.574923,lng:-2.194350,title:'Almacen',icon:'img/gpsloc.png'});
+		});
+		
+		function deactivate() {
+			$("#inicio").removeClass('active');
+			$("#productos").removeClass('active');
+			$("#contacto").removeClass('active');
+		}
+		function inicio () {
+			$("#myCarousel").carousel(0);
+			deactivate();
+			$("#inicio").addClass('active');
+		}
+		function productos () {
+			$("#myCarousel").carousel(1);
+			deactivate();
+			$("#productos").addClass('active');
+		}
+		function contacto () {
+			deactivate();
+			$("#myCarousel").carousel(2);
+			$("#contacto").addClass('active');
+		}
+        </script>
+    </head>
+    
+    <body>
+        
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar navbar-inverse navbar-static-top">
+          
+            <div class="navbar-header">
+            <a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="navbar-brand"><span class="navbar-pers">Paja y forrajes - ESPARZA</span></a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li id="inicio" class="active"><a href="#" onClick='inicio();'>Inicio</a></li>
+                <li id="productos"><a href="#" onClick='productos();'>Productos</a></li>
+                <li id="contacto"><a href="#" onClick='contacto();'>Contacto</a></li>
+                <li><span>&nbsp;&nbsp;&nbsp;</span></li>
+              </ul>
+            </div>
+    
+        </div>
+      </div><!-- /container -->
+    </div><!-- /navbar wrapper -->
+
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="img/ermita.jpg" class="img-responsive">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Paja y forrajes - ESPARZA</h1>
+          <pthis is="" an="" example="" layout="" with="" carousel="" that="" uses="" the="" bootstrap="" 3="" styles.<="" small=""><p></p>
+          <p><a class="btn btn-lg btn-primary" href="#" onClick='productos();'>Productos</a>
+        </p></pthis></div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/naves.jpg" class="img-responsive">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Productos</h1>
+          <p>Fardos grandes y pequeños.</p>
+          <p><a class="btn btn-large btn-primary" href="#" onClick='contacto();'>Contacto</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/lateral.jpg" class="img-responsive">
+      <div class="container">
+        <div class="carousel-caption">
+          <h4>Contacto: </h4>
+          <p><a class="btn btn-large btn-primary" href="mailto:rebole@gmail.com">Email</a></p>
+          <p><a class="btn btn-large btn-primary visible-xs" href="tel:0034605707018">Llamar</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="icon-next"></span>
+  </a>  
+</div>
+<!-- /.carousel -->
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="container marketing">
+  <!-- START THE FEATURETTES -->
+  <div id="mapa" style="witdh:27em;height:27em"></div>
+  <hr class="featurette-divider">
+  <!-- /END THE FEATURETTES -->
+
+  <!-- FOOTER -->
+  <footer align="center">
+	<p><img src="img/bs.png" width="35" height="25" alt="Bootstrap" longdesc="http://getbootstrap.com">Página construída con <a href="http://getbootstrap.com">Bootstrap</a>, por <a href="#">dabit</a>.</p>
+  </footer>
+</div><!-- /.container -->
+        
+    </body>
+</html>
