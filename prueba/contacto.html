@@ -39,8 +39,9 @@
 			$(document).ready(function(){
 			  map = new GMaps({
 				div: '#mapa',
-				lat: 42.574923,
-				lng: -2.194350
+				lat: 42.6477983,
+				lng: -1.9940995,
+				zoom: 10
 			  });
 			  map.addMarker({lat:42.574923,lng:-2.194350,title:'Almacen',icon:'img/gpsloc.png'});
 			});
@@ -64,24 +65,31 @@
           </div>
 
           <div class="inner cover" align="center">
-            <h2 class="cover-heading text-border">Paja y forrajes - ESPARZA</h2>
             <address>
-                <p class="lead">C/ San Sebastian 12. Los Arcos - NAVARRA.<br/>
-                <abbr title="Telefonos">Tlfs</abbr>: 605 70 70 18, 605 70 70 20.</p>
-                <p class="lead">
+            <table width="100%">
+            <tr>
+                <td class="lead" align="left">C/ San Sebastian 12. </br>Los Arcos - NAVARRA.<br/>
+                <abbr title="Telefonos">Tlfs</abbr>: 605 70 70 20 <br /> 605 70 70 18.</td>
+                <td class="lead" align="center">
                   <a href="mailto:" class="btn btn-lg btn-default">Email</a>
-                </p>
-                <p class="lead" style="width:100px">
+                  <br /> <br />
                   <a href="tel:0034605707020" class="btn btn-lg btn-default visible-xs">Llamar</a>
-                </p>
+                </td>
+            </tr>
+            </table>
             </address>
           </div>
 
           <div id="mapa" style="witdh:25em;height:25em"></div>
 
           <div class="mastfoot">
-            <div class="inner">
-              <p>Página construída con <a href="http://getbootstrap.com">Bootstrap</a>, por <a href="#">dabit</a>.</p>
+            <div class="inner" align="center">
+			<table>
+            	<tr>
+                    <td><img src="img/bs.png" width="35" height="25" alt="Bootstrap" longdesc="http://getbootstrap.com"></td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;Construída con <a href="http://getbootstrap.com">Bootstrap</a>, por <a href="#">dabit</a>.</td>
+                </tr>
+            </table>
             </div>
           </div>
 
